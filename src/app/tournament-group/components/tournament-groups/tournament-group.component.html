@@ -1,0 +1,8 @@
+<div style="width: 15em;" *ngFor="let group of groups">
+  <h2 class="group-name" routerLink="{{group.id}}">
+    {{group.name}}
+    <i class="fa fa-arrow-right"></i>
+  </h2>
+  <app-teams [teams]="group.teams"></app-teams>
+</div>
+

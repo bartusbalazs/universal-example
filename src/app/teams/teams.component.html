@@ -1,0 +1,12 @@
+<div #teamDiv class="teams" *ngFor="let team of teams, let i = index">
+  <button routerLink="/detail/{{team.id}}" appTeamButton
+          type="button">
+<!-------------          NgClass and NgStyle example       ------------->
+<!--          [ngClass]="team === selectedTeam ? 'selected-team' : ''"-->
+<!--          [ngStyle]="team === selectedTeam ? {color:'white'} : {color:'black'}" -->
+
+  <span class="badge">{{i+1}}.</span>
+    <span class="name">{{team.name}}</span>
+    <img *ngIf="team.flagPath" class="flag" [src]="team.flagPath" [alt]="team.name">
+  </button>
+</div>
